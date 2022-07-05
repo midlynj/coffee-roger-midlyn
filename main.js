@@ -11,7 +11,11 @@ function customerAdd(input) {
     let customerInput = addCoffeeSubmit.value
     let filteredCoffees = [];
     if (customerInput == "") {
+        let x = prompt("add coffee")
+        filteredCoffees.push(x)
         filteredCoffees.push(customerInput)
+        console.log(filteredCoffees)
+        tbody.innerHTML = renderCoffees(x);
     }
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
