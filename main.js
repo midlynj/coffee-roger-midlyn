@@ -45,9 +45,12 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+            tbody.innerHTML = renderCoffees(filteredCoffees);
+        } else if ('All Roasts' === selectedRoast) {
+            tbody.innerHTML =renderCoffees(coffees)
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    // tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 // my js
 // function updateSearched (e) {
@@ -100,6 +103,11 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+coffees.sort((a, b) => {
+    return (b.id - a.id);
+})
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
