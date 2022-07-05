@@ -25,6 +25,42 @@ div.tall-row {
     flex-wrap: wrap;
 }
 
+h2 {
+    margin-right: 30px;
+    opacity: 95%;
+    color: sandybrown;
+    animation: flip;
+    animation-duration: 5s;
+
+}
+
+.card-body{
+    background: -webkit-linear-gradient(-45deg, midnightblue, seagreen, orangered, black);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position:  50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position:  50%;
+    }
+}
+
+body {
+    background-image: url("img/coffee-gif.gif");
+    background-size: cover;
+
+
+}
+
+
+
 
 /*#searchName {*/
 /*    width: 100%;*/

@@ -1,5 +1,25 @@
 "use strict"
 
+let addCoffeeTextSearch = document.querySelector('#Name1');
+let addCoffeeSubmit = document.querySelector('#submit-name1');
+
+addCoffeeTextSearch.addEventListener('click', customerAdd);
+addCoffeeSubmit.addEventListener('input', updateCoffees);
+
+function customerAdd(input) {
+    input.preventDefault()
+    let customerInput = addCoffeeSubmit.value
+    let filteredCoffees = [];
+    if (customerInput == "") {
+        filteredCoffees.push(customerInput)
+    }
+
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+
+//dont have to call the function since the function is called when the button is click on onclick
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
@@ -50,6 +70,12 @@ function updateSearched(e) {
     coffees.forEach(function (coffee) {
         if (coffee.name === selectedName || coffee.name.startsWith(selectedName) || submitSearch.value.toLowerCase() === coffee.name.toLowerCase() || coffee.name.toLowerCase().startsWith(selectedName.toLowerCase()) || coffee.name.includes(selectedName) || coffee.name.toLowerCase().includes(selectedName.toLowerCase())) {
             filteredCoffees.push(coffee);
+            if (selectedName === coffee.name) {
+              let randomJoke= ["You mocha me very happy.","How does an IT guy drink coffee? He installs Java.","What did the coffee say to their date? Hey there, hot stuff!", "How is divorce like an Espresso? – It’s expensive and bitter.","She drank so much coffee at work, she considered it part of her daily grind."];
+                let joke = randomJoke[Math.floor(Math.random()*randomJoke.length)];
+                alert("Here's a random joke. " + joke);
+            }
+
         }
     })
     tbody.innerHTML = renderCoffees(filteredCoffees);
