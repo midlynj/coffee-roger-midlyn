@@ -10,7 +10,7 @@ function customerAdd(input) {
     input.preventDefault()
     let customerInput = addCoffeeSubmit.value
     let filteredCoffees = [];
-    if (customerInput == "") {
+    if (customerInput === "") {
         let x = prompt("add coffee")
         filteredCoffees.push(x)
         filteredCoffees.push(customerInput)
@@ -20,6 +20,9 @@ function customerAdd(input) {
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
+
+
 
 
 //dont have to call the function since the function is called when the button is click on onclick
@@ -126,3 +129,5 @@ submitButton.addEventListener('click', updateCoffees);
 // my js
 submitName.addEventListener('click', updateSearched);
 submitSearch.addEventListener('input', updateSearched);
+
+

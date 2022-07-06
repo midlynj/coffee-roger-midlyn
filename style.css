@@ -8,6 +8,11 @@ td, th {
     padding: 5px 10px;
 }
 
+a {
+    text-decoration: none;
+
+}
+
 /*div.row {*/
 /*    border: dotted 1px red;*/
 /*}*/
@@ -54,13 +59,14 @@ h2 {
 
 body {
     background-image: url("img/coffee-gif.gif");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 
 
 }
 
 .white-font {
-    color: white;
+    color: black;
 }
 
 
