@@ -10,12 +10,12 @@ function customerAdd(input) {
     input.preventDefault()
     let customerInput = addCoffeeSubmit.value
     let filteredCoffees = [];
-    if (customerInput === "") {
-        let x = prompt("add coffee")
-        filteredCoffees.push(x)
+    if (customerInput == "") {
+
+
         filteredCoffees.push(customerInput)
         console.log(filteredCoffees)
-        tbody.innerHTML = renderCoffees(x);
+
     }
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
