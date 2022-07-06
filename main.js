@@ -1,5 +1,18 @@
 "use strict"
 
+setInterval(myFunction(),3000)
+
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    let randomJoke= ["You mocha me very happy.","How does an IT guy drink coffee? He installs Java.","What did the coffee say to their date? Hey there, hot stuff!", "How is divorce like an Espresso? – It’s expensive and bitter.","She drank so much coffee at work, she considered it part of her daily grind."];
+      let joke = randomJoke[Math.floor(Math.random()*randomJoke.length)];
+      x.innerText = "Here's a random joke. " + joke;
+
+
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
+
 let addCoffeeTextSearch = document.querySelector('#Name1');
 let addCoffeeSubmit = document.querySelector('#submit-name1');
 
@@ -81,9 +94,10 @@ function updateSearched(e) {
         if (coffee.name === selectedName || coffee.name.startsWith(selectedName) || submitSearch.value.toLowerCase() === coffee.name.toLowerCase() || coffee.name.toLowerCase().startsWith(selectedName.toLowerCase()) || coffee.name.includes(selectedName) || coffee.name.toLowerCase().includes(selectedName.toLowerCase())) {
             filteredCoffees.push(coffee);
             if (selectedName === coffee.name) {
-              let randomJoke= ["You mocha me very happy.","How does an IT guy drink coffee? He installs Java.","What did the coffee say to their date? Hey there, hot stuff!", "How is divorce like an Espresso? – It’s expensive and bitter.","She drank so much coffee at work, she considered it part of her daily grind."];
-                let joke = randomJoke[Math.floor(Math.random()*randomJoke.length)];
-                alert("Here's a random joke. " + joke);
+              // let randomJoke= ["You mocha me very happy.","How does an IT guy drink coffee? He installs Java.","What did the coffee say to their date? Hey there, hot stuff!", "How is divorce like an Espresso? – It’s expensive and bitter.","She drank so much coffee at work, she considered it part of her daily grind."];
+              //   let joke = randomJoke[Math.floor(Math.random()*randomJoke.length)];
+              //   alert("Here's a random joke. " + joke);
+                myFunction()
             }
 
         }
