@@ -30,6 +30,8 @@ div.tall-row {
     flex-wrap: wrap;
 }
 
+
+
 h2 {
     margin-right: 30px;
     opacity: 95%;
@@ -68,6 +70,31 @@ body {
 .white-font {
     color: black;
 }
+
+.jumbotron-2 {
+    background: url('img/popular coffee.jpg') center no-repeat;
+    background-size: cover;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.jumbotron-3 {
+    background: url('img/coffee-shop-jumbo.jpg') center no-repeat;
+    background-size: cover;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.inner-content {
+    max-width: 30rem;
+}
+
+#popular-cont {
+    border: solid black;
+    border-radius: 10px;
+}
+
+
 
 
 
